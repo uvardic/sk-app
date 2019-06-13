@@ -1,0 +1,38 @@
+.root {
+    -fx-padding: 30px;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+
+    -fx-pref-width: 500px;
+    -fx-pref-height: 600px;
+}
+
+.logo_text {
+    -fx-font-size: 20px;
+}
+
+.side_menu_wrapper {
+    -fx-spacing: 20px;
+}
+
+.input_container {
+    -fx-padding: 0 0 20 0;
+    -fx-spacing: 20;
+}
+
+.combobox {
+    /*-fx-pref-width: 200px;*/
+}
+
+.small_text {
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
+}
+
+.projection {
+
+}
+
+.projection_full {
+    -fx-text-fill: red;
+}

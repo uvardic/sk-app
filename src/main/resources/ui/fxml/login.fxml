@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.login.controller.LoginController"
+      stylesheets="@../style/login.css" styleClass="root" alignment="TOP_CENTER">
+    <VBox>
+        <VBox styleClass="input_container">
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input"/>
+        </VBox>
+
+        <VBox styleClass="remember_box_container">
+            <CheckBox fx:id="rememberBox" text="Remember me"/>
+        </VBox>
+
+        <VBox styleClass="message_container" alignment="CENTER">
+            <Label fx:id="messageLabel" styleClass="message"/>
+        </VBox>
+
+        <HBox styleClass="button_container">
+            <Button text="Login" styleClass="button" onAction="#loginAction" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Button text="Register" styleClass="button" onAction="#registerAction" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        </HBox>
+    </VBox>
+</VBox>

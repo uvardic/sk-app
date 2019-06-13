@@ -1,0 +1,8 @@
+.root {
+    -fx-padding: 0;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+
+    -fx-pref-width: 900px;
+    -fx-pref-height: 700px;
+}

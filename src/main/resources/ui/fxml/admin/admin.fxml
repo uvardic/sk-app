@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.admin.controller.AdminController"
+      stylesheets="@../../style/admin/admin.css" styleClass="root" alignment="TOP_CENTER">
+    <HBox>
+        <Pane fx:id="sideMenuPane" prefWidth="200"/>
+        <Pane fx:id="contentPane" prefWidth="700"/>
+    </HBox>
+</VBox>

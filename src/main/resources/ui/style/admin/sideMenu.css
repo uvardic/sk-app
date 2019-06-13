@@ -1,0 +1,31 @@
+.root {
+    -fx-padding: 10 0 0 0;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+
+    -fx-pref-width: 200px;
+    -fx-pref-height: 700px;
+    -fx-background-color: #fff;
+}
+
+.logo_text {
+    /*-fx-text-fill: #fff;*/
+    -fx-font-size: 20px;
+}
+
+.menu_option {
+    -fx-padding: 20 0 0 0;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.selected_menu_option {
+    -fx-font-weight: bold;
+    -fx-padding: 20 0 0 0;
+    -fx-font-size: 16px;
+}
+
+.version_text {
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}

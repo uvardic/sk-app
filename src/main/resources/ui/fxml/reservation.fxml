@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.reservation.controller.ReservationController"
+      stylesheets="@../style/reservation.css" styleClass="root" alignment="TOP_CENTER">
+
+    <HBox spacing="50">
+        <VBox spacing="20">
+            <HBox spacing="5">
+                <ImageView>
+                    <Image url="@../img/seat.png"/>
+                </ImageView>
+                <Label text="Seat"/>
+            </HBox>
+            <HBox spacing="5">
+                <ImageView>
+                    <Image url="@../img/seatSelected.png"/>
+                </ImageView>
+                <Label text="Seat selected"/>
+            </HBox>
+            <HBox spacing="5">
+                <ImageView>
+                    <Image url="@../img/seatTaken.png"/>
+                </ImageView>
+                <Label text="Seat taken"/>
+            </HBox>
+        </VBox>
+
+        <VBox fx:id="container" spacing="20"/>
+    </HBox>
+    <Region prefHeight="15"/>
+    <Separator/>
+    <Region prefHeight="15"/>
+    <HBox spacing="20">
+        <Button text="Back" onAction="#backAction" styleClass="button"/>
+        <Button text="Reserve" onAction="#reserveAction" styleClass="button"/>
+    </HBox>
+
+</VBox>

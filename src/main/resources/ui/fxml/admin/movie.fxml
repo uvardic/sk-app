@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.admin.controller.MovieController"
+      stylesheets="@../../style/admin/movie.css" styleClass="root">
+    <VBox alignment="TOP_CENTER">
+        <Label text="Save"/>
+    </VBox>
+    <Separator/>
+    <Region prefHeight="20"/>
+
+    <VBox>
+        <VBox styleClass="input_container">
+            <TextField fx:id="idField" promptText="Id" styleClass="input"/>
+            <TextField fx:id="nameField" promptText="Name" styleClass="input"/>
+            <TextField fx:id="genreField" promptText="Genre" styleClass="input"/>
+            <TextField fx:id="descriptionField" promptText="Description" styleClass="input"/>
+            <TextField fx:id="lengthField" promptText="Length" styleClass="input"/>
+            <TextField fx:id="actorsField" promptText="Actors (actor1, actor2 ...)" styleClass="input"/>
+        </VBox>
+        <HBox styleClass="button_container">
+            <Button onAction="#saveAction" text="Save" styleClass="button"/>
+            <Label fx:id="messageLabel" styleClass="message"/>
+        </HBox>
+    </VBox>
+
+    <Region prefHeight="20"/>
+    <VBox alignment="TOP_CENTER">
+        <Label text="Delete"/>
+    </VBox>
+    <Separator/>
+    <Region prefHeight="20"/>
+
+    <VBox>
+        <VBox styleClass="input_container">
+            <TextField fx:id="idDeleteField" promptText="Id" styleClass="input"/>
+        </VBox>
+        <HBox styleClass="button_container">
+            <Button onAction="#deleteAction" text="Delete" styleClass="button"/>
+            <Label fx:id="deleteMessageLabel" styleClass="message"/>
+        </HBox>
+    </VBox>
+
+    <Region prefHeight="20"/>
+    <VBox alignment="TOP_CENTER">
+        <Label text="Find All"/>
+    </VBox>
+    <Separator/>
+    <Region prefHeight="20"/>
+
+    <HBox styleClass="button_container">
+        <Button onAction="#findAllAction" text="Find All" styleClass="button"/>
+        <Label text="Values will be printed out on the console" styleClass="message"/>
+    </HBox>
+</VBox>
+

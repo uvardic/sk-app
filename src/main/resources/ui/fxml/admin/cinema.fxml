@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.admin.controller.CinemaController"
+      stylesheets="@../../style/admin/cinema.css" styleClass="root" alignment="TOP_CENTER">
+
+    <VBox alignment="TOP_CENTER">
+        <Label text="Save"/>
+    </VBox>
+    <Separator/>
+    <Region prefHeight="20"/>
+
+    <VBox>
+        <VBox styleClass="input_container">
+            <TextField fx:id="idField" promptText="Id" styleClass="input"/>
+            <TextField fx:id="cinemaNumberField" promptText="Cinema Number" styleClass="input"/>
+            <TextField fx:id="numberOfRowsField" promptText="Number Of Rows" styleClass="input"/>
+            <TextField fx:id="numberOfSeatsPerRowField" promptText="Number Of Seats Per Row" styleClass="input"/>
+        </VBox>
+        <HBox styleClass="button_container">
+            <Button onAction="#saveAction" text="Save" styleClass="button"/>
+            <Label fx:id="messageLabel" styleClass="message"/>
+        </HBox>
+    </VBox>
+
+    <Region prefHeight="20"/>
+    <VBox alignment="TOP_CENTER">
+        <Label text="Delete"/>
+    </VBox>
+    <Separator/>
+    <Region prefHeight="20"/>
+
+    <VBox>
+        <VBox styleClass="input_container">
+            <TextField fx:id="idDeleteField" promptText="Id" styleClass="input"/>
+        </VBox>
+        <HBox styleClass="button_container">
+            <Button onAction="#deleteAction" text="Delete" styleClass="button"/>
+            <Label fx:id="deleteMessageLabel" styleClass="message"/>
+        </HBox>
+    </VBox>
+
+    <Region prefHeight="20"/>
+    <VBox alignment="TOP_CENTER">
+        <Label text="Find All"/>
+    </VBox>
+    <Separator/>
+    <Region prefHeight="20"/>
+
+    <HBox styleClass="button_container">
+        <Button onAction="#findAllAction" text="Find All" styleClass="button"/>
+        <Label text="Values will be printed out on the console" styleClass="message"/>
+    </HBox>
+
+</VBox>

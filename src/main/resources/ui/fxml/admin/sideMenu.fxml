@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Region?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.admin.controller.SideMenuController"
+      stylesheets="@../../style/admin/sideMenu.css" styleClass="root" alignment="TOP_CENTER">
+
+    <VBox alignment="TOP_CENTER">
+        <Label text="Admin Panel" styleClass="logo_text"/>
+    </VBox>
+    <Region prefHeight="75"/>
+    <VBox alignment="TOP_CENTER">
+        <Label fx:id="userOption" onMouseClicked="#loadUserParent" text="User" styleClass="selected_menu_option"/>
+        <Label fx:id="userStatusOption" onMouseClicked="#loadUserStatusParent" text="User Status" styleClass="menu_option"/>
+        <Label fx:id="projectionOption" onMouseClicked="#loadProjectionParent" text="Projection" styleClass="menu_option"/>
+        <Label fx:id="movieOption" onMouseClicked="#loadMovieParent" text="Movie" styleClass="menu_option"/>
+        <Label fx:id="cinemaOption" onMouseClicked="#loadCinemaParent" text="Cinema" styleClass="menu_option"/>
+    </VBox>
+    <VBox VBox.vgrow="ALWAYS" alignment="BOTTOM_CENTER" maxHeight="Infinity">
+        <Label text="Version 0.0.1" styleClass="version_text" />
+    </VBox>
+
+</VBox>

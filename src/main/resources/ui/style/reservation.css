@@ -1,0 +1,12 @@
+.root {
+    -fx-padding: 30;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+
+    -fx-pref-width: 900px;
+    -fx-pref-height: 500px;
+}
+
+.button {
+    -fx-pref-width: 100px;
+}

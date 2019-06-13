@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.register.controller.RegisterController"
+      stylesheets="@../style/register.css" styleClass="root" alignment="TOP_CENTER">
+
+    <VBox>
+        <VBox styleClass="input_container">
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input"/>
+            <TextField fx:id="emailField" promptText="Email" styleClass="input"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input"/>
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="input"/>
+        </VBox>
+
+        <VBox styleClass="message_container" alignment="CENTER">
+            <Label fx:id="messageLabel" styleClass="message"/>
+        </VBox>
+
+        <HBox styleClass="button_container">
+            <Button text="Back" onAction="#backAction" styleClass="button" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Button text="Register" onAction="#registerAction" styleClass="button" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        </HBox>
+    </VBox>
+
+</VBox>

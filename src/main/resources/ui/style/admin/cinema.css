@@ -1,0 +1,32 @@
+.root {
+    -fx-padding: 30;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+
+    -fx-pref-width: 700px;
+}
+
+.input_container {
+    -fx-padding: 0 0 20 0;
+    -fx-spacing: 20;
+}
+
+.input {
+
+}
+
+.message_container {
+    -fx-padding: 0 0 20 0;
+}
+
+.message {
+    -fx-padding: 4;
+}
+
+.button_container {
+    -fx-spacing: 20;
+}
+
+.button {
+    -fx-pref-width: 100px;
+}

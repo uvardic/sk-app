@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.ui.index.controller.IndexController"
+      stylesheets="@../style/index.css" styleClass="root" alignment="TOP_CENTER">
+
+    <VBox alignment="TOP_CENTER" styleClass="input_container">
+        <Label text="Reservations" styleClass="logo_text"/>
+        <VBox HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <DatePicker fx:id="datePicker" promptText="Projection Date" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Label text="If left blank current date will be used" styleClass="small_text"/>
+        </VBox>
+        <ComboBox fx:id="cinemaComboBox" promptText="Cinema" styleClass="combobox" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <ComboBox fx:id="movieComboBox" promptText="Movie" styleClass="combobox" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+    </VBox>
+    <VBox>
+        <HBox>
+            <Button text="Find Projections" onAction="#findProjectionsAction" styleClass="button" />
+            <Label fx:id="messageLabel"/>
+        </HBox>
+    </VBox>
+    <Region prefHeight="30"/>
+    <HBox spacing="40">
+        <VBox fx:id="firstProjectionContainer" spacing="20"/>
+        <VBox fx:id="secondProjectionContainer" spacing="20"/>
+    </HBox>
+
+</VBox>
