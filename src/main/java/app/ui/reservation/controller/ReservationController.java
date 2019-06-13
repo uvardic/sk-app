@@ -112,18 +112,24 @@ public class ReservationController {
         if (selectedSeats.isEmpty())
             return;
 
-//        List<ReservedSeat> reservedSeats = selectedSeats.stream()
-//                .map(this::mapSeat)
-//                .collect(Collectors.toList());
+        List<ReservedSeat> reservedSeats = selectedSeats.stream()
+                .map(this::mapSeat)
+                .collect(Collectors.toList());
 
-//        Float totalPrice = projection.getTicketPrice() * reservedSeats.size();
-//
-//        service.reserve(projection.getId(), 0f, reservedSeats);
+        Float totalPrice = projection.getTicketPrice() * reservedSeats.size();
+
+        if (service.reserve(projection.getId(), totalPrice, reservedSeats))
+            service.loadIndexParent();
+        else
+            System.err.println("ERROR");
     }
 
-//    private ReservedSeat mapSeat(Seat seat) {
-//
-//    }
+    private ReservedSeat mapSeat(Seat seat) {
+        ReservedSeat reservedSeat = new ReservedSeat();
+        reservedSeat.setReservedRow(seat.getRow());
+        reservedSeat.setReservedColumn(seat.getColumn());
+        return reservedSeat;
+    }
 
     @Data
     private class Seats {
@@ -163,7 +169,7 @@ public class ReservationController {
 
     @Data
     @NoArgsConstructor
-    public class Seat {
+    private class Seat {
 
         private Integer row;
 

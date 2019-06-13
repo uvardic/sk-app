@@ -49,6 +49,7 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setUserId(Long.valueOf((Integer) tokenService.parseToken(tokenService.readToken()).get("id")));
         reservation.setReservedSeats(selectedSeats);
         reservation.setTotalPrice(totalPrice);
+        reservation.setJwt(tokenService.readToken());
 
         Reservation response = webClient.build()
                 .post()
